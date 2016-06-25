@@ -1,0 +1,24 @@
+## LOGS
+logs
+*.log
+npm-debug.log*
+
+## BUILD
+node_modules
+.grunt
+
+## DEPENDENCIES
+bower_components
+
+## IDE
+.idea/
+*.iws
+
+
+
+## OS Files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.lnk
