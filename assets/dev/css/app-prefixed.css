@@ -1,0 +1,18 @@
+body {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.primary,
+.primary-text {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.secondary,
+.secondary-text {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.accent,
+.accent-text {
+    color: rgba(80, 80, 200, 0.8);
+}
