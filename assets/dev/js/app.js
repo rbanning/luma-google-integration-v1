@@ -6,7 +6,15 @@
 
     var app = angular.module(hallpass.ng.names.app, ['ui.router']);
 
-    window.app.config(function ($stateProvider, $urlRouterProvider) {
+
+    //SETUP AUTHORIZATION
+    app.config(['$httpProvider', function ($httpProvider) {
+        $httpProvider.interceptors.push('apiTokenService');
+    }]);
+
+
+    //SETUP VIEWS (ROUTES)
+    app.config(function ($stateProvider, $urlRouterProvider) {
 
         $urlRouterProvider.otherwise('/home');
 
@@ -16,6 +24,12 @@
                 controller: 'HomeCtrl',
                 controllerAs: 'vm',
                 templateUrl: hallpass.ng.templatePath('home.html')
+            })
+            .state('asset', {
+                url: '/asset/:id',
+                controller: 'AssetCtrl',
+                controllerAs: 'vm',
+                templateUrl: hallpass.ng.templatePath('asset.html')
             })
             .state('login', {
                 url: '/login',

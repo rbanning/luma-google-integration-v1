@@ -1,0 +1,43 @@
+<div class="valign-wrapper center-align">
+    <div class="valign center-align full">
+        <div class="box red darken-4 white-text" ng-if="vm.errorMessage">{{vm.errorMessage}}</div>
+        <div ng-if="!vm.isLoggedIn">
+            <div class="card-panel red">Must be authenticated before using this app!</div>
+            <a href="#/login">Please Login!</a>
+        </div>
+        <div class="row" ng-if="vm.isLoggedIn">
+            <div class="light-blue lighten-3 box" ng-if="!vm.isLoaded">Loading...</div>
+            <div class="col s12 m4 l2">
+                <h3>Welcome {{vm.user.name}}</h3>
+                <a ui-sref="logout">logout</a>
+                <p>
+                    <a ui-sref="home" class="btn-floating btn-large waves-effect waves-light" title="<-- back">
+                        <i class="material-icons">arrow_back</i>
+                    </a>
+                </p>
+            </div>
+            <div class="col s12 m8 l10">
+                <h4>Details</h4>
+                <div class="card green lighten-5" style="margin: 0.5em;">
+                    <div class="card-content">
+                        <div class="card-title">{{vm.gooEvent.Title}}</div>
+                        <p ng-if="vm.gooEvent.Description">{{vm.gooEvent.Description}}</p>
+                        <p class="code">
+                            <strong>Date:</strong> <span class="indigo-text">{{vm.gooEvent.Date | date}}</span> <br/>
+                            <strong>Type:</strong> <span class="indigo-text">{{vm.gooEvent.Type}}</span> <br/>
+                            <strong>Context:</strong> <span class="indigo-text">{{vm.gooEvent.Context}}</span> <br/>
+                            <strong>Owner:</strong> <span class="indigo-text">{{vm.gooEvent.Owner}}</span> <br/>
+                        </p>
+                        <p ng-if="vm.gooEvent.Url">
+                            <a ng-href="{{vm.gooEvent.Url}}" target="_blank">View Google Asset</a>
+                        </p>
+                    </div>
+                </div>
+                <p>
+                    todo:: integrate with Google Drive!
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>

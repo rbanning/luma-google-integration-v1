@@ -12,6 +12,9 @@
                 var parts = window.location.pathname.split('/').filter(Boolean);
                 parts.splice(3);    //remove all but the first three parts of the path
                 this._siteroot = '/' + parts.join('/') + '/';
+
+                //got to think of a better way
+                this._siteroot = "/";
             }
             return this._siteroot;
         },
@@ -37,9 +40,11 @@
             common: 'GooAppCommon'
         },
         templatePath: function (name) {
-            return hallpass.siteroot + 'templates/' + name + "?_v=" + (new Date()).getTime();
+            //return hallpass.siteroot + 'templates/' + name + "?_v=" + (new Date()).getTime();
+            return 'templates/' + name + "?_v=" + (new Date()).getTime();
         }
     };
+
 
     window.hallpass = $.extend(true, {}, window.hallpass, hallpass);
 

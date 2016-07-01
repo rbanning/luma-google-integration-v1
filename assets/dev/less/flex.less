@@ -1,0 +1,62 @@
+@import (reference) "variables.less";
+
+@flex-spacer: 0.5em;
+
+.flex-margin {
+  margin: @flex-spacer;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-row {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: center;
+
+  .flex-margin {
+    margin: 0 @flex-spacer;
+  }
+  .flex-padding {
+    padding: 0 @flex-spacer;
+  }
+}
+
+.flex-column {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
+
+  .flex-margin {
+    margin: @flex-spacer 0;
+  }
+  .flex-padding {
+    padding: @flex-spacer 0;
+  }
+}
+
+.flex {
+  flex: 1;
+}
+
+// ** borders ** //
+.flex-border-right {
+  border-right: solid @flex-spacer/2 rgba(0, 0, 0, 0.1);
+}
+
+.flex-border-left {
+  border-left: solid @flex-spacer/2 rgba(0, 0, 0, 0.1);
+}
+
+.flex-border-top {
+  border-top: solid @flex-spacer/2 rgba(0, 0, 0, 0.1);
+}
+
+.flex-border-bottom {
+  border-bottom: solid @flex-spacer/2 rgba(0, 0, 0, 0.1);
+}

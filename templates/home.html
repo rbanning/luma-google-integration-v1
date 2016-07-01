@@ -1,0 +1,38 @@
+<div class="valign-wrapper center-align">
+    <div class="valign center-align full">
+        <div class="box red darken-4 white-text" ng-if="vm.errorMessage">{{vm.errorMessage}}</div>
+        <div ng-if="!vm.isLoggedIn">
+            <div class="card-panel red">Must be authenticated before using this app!</div>
+            <a href="#/login">Please Login!</a>
+        </div>
+        <div class="row" ng-if="vm.isLoggedIn">
+            <div class="light-blue lighten-3 box" ng-if="!vm.isLoaded">Loading...</div>
+            <div class="col s12 m4 l2">
+                <h3>Welcome {{vm.user.name}}</h3>
+                <a ui-sref="logout">logout</a>
+            </div>
+            <div class="col s12 m8 l10 flex-row flex-wrap">
+                <div class="card green lighten-5" style="margin: 0.5em;" ng-repeat="e in vm.gooEvents track by e.ID">
+                    <div class="card-content">
+                        <div class="card-title">{{e.Title}}</div>
+                        <p ng-if="e.Description">{{e.Description}}</p>
+                        <p class="code">
+                            <strong>Date:</strong> <span class="indigo-text">{{e.Date | date}}</span> <br/>
+                            <strong>Type:</strong> <span class="indigo-text">{{e.Type}}</span> <br/>
+                            <strong>Context:</strong> <span class="indigo-text">{{e.Context}}</span> <br/>
+                            <strong>Owner:</strong> <span class="indigo-text">{{e.Owner}}</span> <br/>
+                        </p>
+                    </div>
+                    <div class="card-action">
+                        <a ng-href="{{e.Url}}" target="_blank" ng-if="e.Url" class="strong">View Google Asset</a>
+                        <a ui-sref="asset({id: e.ID})">
+                            <span ng-if="!e.Url">Add Google Asset</span>
+                            <span ng-if="e.Url">Update Google Asset</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

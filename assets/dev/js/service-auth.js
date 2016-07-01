@@ -4,7 +4,7 @@
 ;(function (hallpass, app) {
     'use strict';
 
-    app.factory('AuthService', [function () {
+    app.factory('authService', [function () {
 
         var api = {
             currentUser: null,
@@ -13,6 +13,7 @@
             }
         };
 
+        //this is just a stub... real app must allow for Google Auth
         api.login = function () {
             this.currentUser = {
                 name: 'Test User',

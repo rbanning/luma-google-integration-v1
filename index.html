@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Goo Data</title>
+
+    <!-- STYLES -->
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+    <link type="text/css" rel="stylesheet" href="assets/dist/css/app.min.css"/>
+
+</head>
+<body ng-app="GooApp">
+
+<nav class="blue-grey lighten-1" role="navigation">
+    <div class="nav-wrapper container">
+        <a id="logo" ui-sref="home" class="brand-logo center dispaly strong">Goo Data</a>
+    </div>
+</nav>
+
+
+<section class="section">
+    <div class="container">
+        <div ui-view></div>
+    </div>
+</section>
+
+
+<footer class="page-footer blue-grey lighten-1">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">Goo Data</h5>
+                <p class="grey-text text-lighten-4">sample app</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            &copy; 2016 Hallpass &amp; Friends &mdash; all rights reserved
+            <a class="grey-text text-lighten-4 right" href="https://myhallpass.com">Contact Us</a>
+        </div>
+    </div>
+</footer>
+
+
+<!-- SCRIPTS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.0/angular-ui-router.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+<script src="assets/dist/js/app.js"></script>
+
+
+</body>
+</html>
