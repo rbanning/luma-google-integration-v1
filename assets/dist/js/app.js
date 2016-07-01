@@ -137,6 +137,7 @@
 }(window.hallpass, angular.module(window.hallpass.ng.names.app)));
 
 
+
 /** end lib **/
 /**
  * Created by rbanning on 4/11/2016.
@@ -299,8 +300,8 @@
 
     app.factory('gooEventsService', ['$http', function ($http) {
 
-        //var baseUrl = 'https://www.myhallpass.com/learning/dev/goo-dummy-data/api/goo-events/';
-        var baseUrl = 'https://localhost:44308/api/goo-events/';
+        var baseUrl = 'https://www.myhallpass.com/learning/dev/goo-dummy-data/api/goo-events/';
+        //var baseUrl = 'https://localhost:44308/api/goo-events/';
 
         var api = {};
 
