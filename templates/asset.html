@@ -20,16 +20,16 @@
                 <h4>Details</h4>
                 <div class="card green lighten-5" style="margin: 0.5em;">
                     <div class="card-content">
-                        <div class="card-title">{{vm.gooEvent.Title}}</div>
-                        <p ng-if="vm.gooEvent.Description">{{vm.gooEvent.Description}}</p>
+                        <div class="card-title">{{vm.gooEvent.title}}</div>
+                        <p ng-if="vm.gooEvent.description">{{vm.gooEvent.description}}</p>
                         <p class="code">
-                            <strong>Date:</strong> <span class="indigo-text">{{vm.gooEvent.Date | date}}</span> <br/>
-                            <strong>Type:</strong> <span class="indigo-text">{{vm.gooEvent.Type}}</span> <br/>
-                            <strong>Context:</strong> <span class="indigo-text">{{vm.gooEvent.Context}}</span> <br/>
-                            <strong>Owner:</strong> <span class="indigo-text">{{vm.gooEvent.Owner}}</span> <br/>
+                            <strong>Date:</strong> <span class="indigo-text">{{vm.gooEvent.date | date}}</span> <br/>
+                            <strong>Type:</strong> <span class="indigo-text">{{vm.gooEvent.type}}</span> <br/>
+                            <strong>Context:</strong> <span class="indigo-text">{{vm.gooEvent.context}}</span> <br/>
+                            <strong>Owner:</strong> <span class="indigo-text">{{vm.gooEvent.owner}}</span> <br/>
                         </p>
                         <p ng-if="vm.gooEvent.Url">
-                            <a ng-href="{{vm.gooEvent.Url}}" target="_blank">View Google Asset</a>
+                            <a ng-href="{{vm.gooEvent.url}}" target="_blank">View Google Asset</a>
                         </p>
                     </div>
                 </div>
