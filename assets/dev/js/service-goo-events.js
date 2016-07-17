@@ -27,6 +27,50 @@
                 });
         };
 
+        //creates a new blank record
+        api.newRecord = function (title, date, type, context, owner, userID) {
+            if (!date) {
+                var f = function (n) {
+                    return n > 9 ? "" + n : "0" + n;
+                };
+                var d = new Date();
+                date = d.getFullYear() + '-' + f(d.getMonth() + 1) + '-' + f(d.getDate()) + 'T' + f(d.getHours()) + ':' + f(d.getMinutes()) + ':' + f(d.getSeconds());
+            }
+            return {
+                title: title,
+                date: date,
+                type: type,
+                context: context,
+                owner: owner,
+                userID: userID
+            };
+        };
+
+        api.addRecord = function (record) {
+            var url = baseUrl;
+            return $http.post(url, record)
+                .then(function (result) {
+                    return result.data;
+                });
+
+        };
+
+        api.updateRecord = function (record) {
+            var url = baseUrl + record.id;
+            return $http.post(url, record)
+                .then(function (result) {
+                    return result.data;
+                });
+        };
+
+        api.deleteRecord = function (record) {
+            var url = baseUrl + record.id;
+            return $http.delete(url, record)
+                .then(function (result) {
+                    return result.data;
+                });
+        };
+
         return api;
 
     }]);

@@ -36,6 +36,10 @@
                 <p>
                     todo:: integrate with Google Drive!
                 </p>
+                <div class="box green lighten-3" ng-show="!!vm.notification">
+                    {{vm.notification}}
+                </div>
+                <button type="button" ng-click="vm.save()">Save Changes</button>
             </div>
         </div>
 
